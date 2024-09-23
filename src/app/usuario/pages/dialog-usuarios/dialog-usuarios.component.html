@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Editar Host</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nombre del Usuario</mat-label>
+    <input matInput [(ngModel)]="data.dusuari" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Host</mat-label>
+    <input matInput [(ngModel)]="data.dhostname">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button (click)="guardarCambios()">Guardar</button>
+</div>

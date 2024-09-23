@@ -1,0 +1,34 @@
+
+<div class="container">
+
+  <div *ngIf="loading">
+    <mat-spinner></mat-spinner>
+      Cargando usuarios...</div>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="!loading && !errorMessage">
+  <table datatable class="row-border hover" id="usuariosTable">
+    <thead>
+      <tr>
+        <th>codigo</th>
+        <th>Nombre</th>
+        <th>Área</th>
+        <th>Host</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.idsigma }}</td>
+        <td>{{ usuario.dusuari }}</td>
+        <td>{{ usuario.DAREAS }}</td>
+        <td>{{ usuario.dhostname }}</td>
+        <td>
+          <button (click)="editarHost(usuario)">Editar Host</button>
+          <button (click)="editarActividad(usuario)">Estado</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
