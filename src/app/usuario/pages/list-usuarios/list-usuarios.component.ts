@@ -39,7 +39,7 @@ export class ListUsuariosComponent implements OnInit {
 
   editarHost(usuario: Usuario) {
     const dialogRef = this.dialog.open(DialogUsuariosComponent, {
-      width: '250px',
+      width: '400px',
       data: usuario
     });
 
@@ -52,7 +52,7 @@ export class ListUsuariosComponent implements OnInit {
 
   editarActividad(usuario: Usuario) {
     const dialogRef = this.dialog.open(ActividadPageComponent, {
-      width: '250px',
+      width: '400px',
       data: usuario
     });
 

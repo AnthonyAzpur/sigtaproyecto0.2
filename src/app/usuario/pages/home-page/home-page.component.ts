@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
-  public sidebarItems = [
-    { label: 'Listado Usuarios', icon: 'label', url: './list-usuario' },
-  ]
+  
 }

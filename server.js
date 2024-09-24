@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const axios = require('axios'); // Para hacer solicitudes HTTP
+const axios = require('axios');
 const app = express();
 
 // Middleware para parsear cuerpos JSON
@@ -29,7 +29,28 @@ app.post('/listar-usuarios', async (req, res) => {
   }
 });
 
+// Definir ruta para actualizar el host
+app.post('/actualizar-host', async (req, res) => {
+  try {
+    const { idsigma, dhostname } = req.body; // Cambia a idsigma y dhostname
+    const response = await axios.post('https://webapp.mdsmp.gob.pe/sigtabackend/public/v1/sigta/actualizarhostsigta/actualizar', {
+      id: idsigma,
+      host: dhostname
+    }, {
+      headers: {
+        'Authorization': 'Bearer your_token_here',
+        'Content-Type': 'application/json'
+      }
+    });
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error al actualizar el host serve,js', error.response ? error.response.data : error.message);
+    res.status(error.response ? error.response.status : 500).json({ message: '500 Error al actualizar el host' });
+  }
+});
+
 // Iniciar el servidor
-app.listen(3000, () => {
-  console.log('Servidor corriendo en puerto 3000');
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });

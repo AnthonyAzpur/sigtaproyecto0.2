@@ -1,7 +1,6 @@
 
-<div class="container">
-
-  <div *ngIf="loading">
+<div class="container-list">
+  <div *ngIf="loading" class="loading">
     <mat-spinner></mat-spinner>
       Cargando usuarios...</div>
 <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
@@ -22,7 +21,7 @@
         <td>{{ usuario.dusuari }}</td>
         <td>{{ usuario.DAREAS }}</td>
         <td>{{ usuario.dhostname }}</td>
-        <td>
+        <td class="Abotton">
           <button (click)="editarHost(usuario)">Editar Host</button>
           <button (click)="editarActividad(usuario)">Estado</button>
         </td>
@@ -30,5 +29,4 @@
     </tbody>
   </table>
 </div>
-
 </div>

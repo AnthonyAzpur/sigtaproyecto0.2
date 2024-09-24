@@ -1,0 +1,17 @@
+
+.container {
+  display: flex; /* Usar flexbox para el diseño */
+  min-height: 100vh; /* Mínima altura de la ventana, se adapta al contenido */
+}
+
+.menu {
+  width: 280px; /* Ancho fijo para el menú */
+  background-color: #f0f0f0; /* Color de fondo para el menú */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
+}
+
+.content {
+
+  flex: 1; /* Toma el espacio restante */
+  background-color: #ffffff; /* Color de fondo para el contenido */
+}

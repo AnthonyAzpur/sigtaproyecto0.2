@@ -1,15 +1,17 @@
 <h1 mat-dialog-title>Editar Host</h1>
-<div mat-dialog-content>
-  <mat-form-field>
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="fill">
     <mat-label>Nombre del Usuario</mat-label>
     <input matInput [(ngModel)]="data.dusuari" disabled>
   </mat-form-field>
-  <mat-form-field>
+
+  <mat-form-field appearance="fill">
     <mat-label>Host</mat-label>
-    <input matInput [(ngModel)]="data.dhostname">
+    <input matInput [(ngModel)]="data.dhostname" required>
+    <mat-error *ngIf="!data.dhostname">El campo Host es requerido.</mat-error>
   </mat-form-field>
 </div>
-<div mat-dialog-actions>
+<div  class="dialog-actions">
   <button mat-button (click)="onNoClick()">Cancelar</button>
-  <button mat-button (click)="guardarCambios()">Guardar</button>
+  <button mat-button (click)="guardarCambios()" [disabled]="!data.dhostname">Guardar</button>
 </div>

@@ -27,4 +27,22 @@ export class DataService {
       );
   }
 
+// Método para actualizar el host
+updateHost(idsigma: string, dhostname: string): Observable<any> {
+  const url = 'http://localhost:3000/actualizar-host'; // Asegúrate de que sea la URL correcta
+  const headers = new HttpHeaders({
+    'Authorization': 'Bearer your_token_here', // Reemplaza con tu token real
+    'Content-Type': 'application/json'
+  });
+
+  const body = { idsigma, dhostname }; // Cambia el cuerpo para que tenga idsigma y dhostname
+
+  return this.http.post(url, body, { headers })
+    .pipe(
+      catchError(error => {
+        console.error('Error al actualizar el hostadata service', error);
+        return throwError(error);
+      })
+    );
+}
 }

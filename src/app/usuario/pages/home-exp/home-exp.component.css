@@ -1,0 +1,38 @@
+body{
+  height: 100%;
+}
+
+.vertical-toolbar {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  border-radius: 5px;
+  width: auto; /* Ajusta el ancho según sea necesario */
+  background-color: #262b69; /* Color de fondo */
+  color: white; /* Color del texto */
+}
+
+.toolbar-item {
+  padding: 15px;
+  background-color: rgb(9, 79, 139);
+  border-radius: 8px ;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  width: 120px;
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.toolbar-item:hover {
+  background-color: #4d4d4d; /* Color al pasar el mouse */
+}
+
+.main-content {
+  border-radius: 5px;
+  margin: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+  flex-grow: 1; /* Para que ocupe el resto del espacio */
+}

@@ -1,0 +1,40 @@
+.sidenav {
+  width: auto; /* Ancho fijo para el menú */
+  height: 100%;
+  background-color: #26275e; /* Color de fondo del menú */
+  color: white; /* Color del texto */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra para el menú */
+}
+
+.sidenav h2 {
+  font-size: 24px;
+  color: #ffffff; /* Color del encabezado */
+}
+
+.sidenav ul {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+}
+
+.sidenav li {
+  padding: 10px 0; /* Espaciado entre elementos */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+  transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+.sidenav li:hover {
+  background-color: #616161; /* Color de fondo al pasar el mouse */
+}
+
+/* Añadir estilos para el routerLink */
+.nav-item {
+  text-decoration: none; /* Sin subrayado en los enlaces */
+  color: white; /* Color del texto */
+}
+.list-menu{
+  background-color: #ffffff;
+  border-radius: 5px;
+
+
+}
