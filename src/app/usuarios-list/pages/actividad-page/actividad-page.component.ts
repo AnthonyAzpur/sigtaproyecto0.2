@@ -9,7 +9,7 @@ import { Usuario } from '../../../usuario/interfaces/user.model';
 })
 export class ActividadPageComponent {
   constructor(
-    public dialogRef: MatDialogRef<ActividadPageComponent>, // Cambia aquí
+    public dialogRef: MatDialogRef<ActividadPageComponent>, 
     @Inject(MAT_DIALOG_DATA) public data: Usuario
   ) {}
 

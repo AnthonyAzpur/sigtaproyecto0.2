@@ -63,10 +63,20 @@ button:hover {
 }
 
 .error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 
-  color: red;
+  color: rgb(43, 43, 43);
   margin: 10px 0;
   font-weight: bold;
+}
+.error img {
+  margin: 20px;
+  height: 150px;
+  width: 150px;
 }
 .loading{
   padding-left: 45%;

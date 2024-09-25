@@ -3,7 +3,9 @@
   <div *ngIf="loading" class="loading">
     <mat-spinner></mat-spinner>
       Cargando usuarios...</div>
-<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="errorMessage" class="error">
+  <img src="assets/svg/error_icon.svg" alt="Error Icon" />
+  {{ errorMessage }}</div>
 <div *ngIf="!loading && !errorMessage">
   <table datatable class="row-border hover" id="usuariosTable">
     <thead>
