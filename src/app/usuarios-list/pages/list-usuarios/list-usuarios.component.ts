@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../../../usuario/services/data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogUsuariosComponent } from '../dialog-usuarios/dialog-usuarios.component';
 import { ActividadPageComponent } from '../actividad-page/actividad-page.component';
-import { Usuario } from './user.model';
+import { Usuario } from '../../../usuario/interfaces/user.model';
 
 @Component({
   selector: 'app-list-usuarios',
@@ -12,8 +12,8 @@ import { Usuario } from './user.model';
 })
 export class ListUsuariosComponent implements OnInit {
   usuarios: Usuario[] = [];
-  errorMessage: string = ''; // Asegúrate de que esta propiedad esté definida
-  loading: boolean = true;    // Asegúrate de que esta propiedad esté definida
+  errorMessage: string = '';
+  loading: boolean = true;
 
   constructor(private dataService: DataService, private dialog: MatDialog) {}
 
@@ -23,14 +23,13 @@ export class ListUsuariosComponent implements OnInit {
 
   cargarUsuarios() {
     this.loading = true;
-    const filtro = {}; // Filtro vacío
+    const filtro = {};
     this.dataService.listarUsuarios(filtro).subscribe(
       data => {
         this.usuarios = data;
         this.loading = false;
       },
       error => {
-        console.error('Error al obtener usuarios', error);
         this.errorMessage = 'No se pudieron cargar los usuarios. Intente más tarde.';
         this.loading = false;
       }
@@ -45,7 +44,7 @@ export class ListUsuariosComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        console.log('Host editado:', result);
+        // Aquí puedes manejar el resultado si es necesario
       }
     });
   }
@@ -58,7 +57,7 @@ export class ListUsuariosComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        console.log('Actividad editada:', result);
+        // Aquí puedes manejar el resultado si es necesario
       }
     });
   }

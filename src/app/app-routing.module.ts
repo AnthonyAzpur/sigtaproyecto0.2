@@ -6,7 +6,7 @@ const routes: Routes = [
     path:'home',
     loadChildren: () => import('./usuario/usuarios.module').then(m=> m.UsuariosModule),
   },
-  
+
   {
     path: '',
     redirectTo:'home',

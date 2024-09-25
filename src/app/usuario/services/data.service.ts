@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Usuario } from './list-usuarios/user.model'; // Asegúrate de que la ruta sea correcta
+import { Usuario } from '../interfaces/user.model'; // Asegúrate de que la ruta sea correcta
 
 @Injectable({
   providedIn: 'root'

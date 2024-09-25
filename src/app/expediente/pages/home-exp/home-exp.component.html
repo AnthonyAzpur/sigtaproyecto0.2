@@ -1,0 +1,9 @@
+<div class="vertical-toolbar">
+  <div *ngFor="let item of sidebarItems" class="toolbar-item" [routerLink]="item.url">
+    <mat-icon>{{ item.icon }}</mat-icon>
+    {{ item.label }}
+  </div>
+</div>
+<div class="main-content">
+  <router-outlet></router-outlet> <!-- Aquí se carga el contenido -->
+</div>

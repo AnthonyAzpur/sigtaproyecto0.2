@@ -13,7 +13,7 @@ body{
 }
 
 .toolbar-item {
-  padding: 15px;
+  padding: 10px;
   background-color: rgb(9, 79, 139);
   border-radius: 8px ;
   margin: 10px;
@@ -21,7 +21,7 @@ body{
   align-items: center;
   display: flex;
 
-  width: 120px;
+  width: 200px;
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 

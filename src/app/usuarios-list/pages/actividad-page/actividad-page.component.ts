@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Usuario } from '../list-usuarios/user.model';
+import { Usuario } from '../../../usuario/interfaces/user.model';
 
 @Component({
   selector: 'app-actividad-page',
